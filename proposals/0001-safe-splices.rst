@@ -8,7 +8,7 @@
 .. implemented:: Leave blank. This will be filled in with the first GHC version which
                  implements the described feature.
 
-Pure Template Haskell
+Safe splices
 ==============
 
 Here you should write a short abstract motivating and briefly summarizing the proposed change.
@@ -21,7 +21,10 @@ Template Haskell code has to be re-compiled every compilation.
 Proposed Change
 ---------------
 
-Make a pure way to write template-haskell.
+1. Define safe splices
+a splice is safe if all it's referenced expressions are defined in external packages.
+
+Don't recompile if a module only contains safe splices.
 
 Drawbacks
 ---------
